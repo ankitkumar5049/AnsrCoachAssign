@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="25dp"
+            android:background="@drawable/border"
+            android:layout_marginTop="50dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/animation"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:justificationMode="inter_word"
+                    android:textSize="20dp"
+                    android:text="Have you noticed any changes in your routine as a result of a sad feeling?"
+                    android:id="@+id/questionTV"/>
+
+                <LinearLayout
+                    android:id="@+id/btnOption"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:layout_below="@+id/questionTV">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/allow"
+                        android:layout_width="0.0dip" android:layout_height="fill_parent"
+                        android:text="yes"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/border"
+                        android:layout_weight="1.0" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deny"
+                        android:layout_width="0.0dip" android:layout_height="fill_parent"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/border"
+                        android:layout_weight="1.0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mLlayoutBottomButtons"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnBack3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_border2"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:text="Go Back"
+                        android:textColor="#19A7CE"
+                        android:textSize="15dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNext3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:padding="5dp"
+                        android:text="Next"
+                        android:background="@drawable/buttton_border"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+</LinearLayout>

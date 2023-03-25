@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/upperTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:justificationMode="inter_word"
+        android:text="This is meant to realise how much this emotion till now."
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:max="100"
+        android:elevation="5dp"
+        android:progress="25"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/lowerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <include layout="@layout/base_card2" />
+            <include layout="@layout/base_card3" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/upperFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <include layout="@layout/base_card3" android:id="@+id/layout3"/>
+            <include layout="@layout/base_card2" android:id="@+id/layout2"/>
+            <include layout="@layout/base_card" android:id="@+id/layout1"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
